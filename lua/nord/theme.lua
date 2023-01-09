@@ -8,10 +8,10 @@ theme.loadSyntax = function()
 		Type = { fg = nord.nord9_gui }, -- int, long, char, etc.
 		StorageClass = { fg = nord.nord9_gui }, -- static, register, volatile, etc.
 		Structure = { fg = nord.nord9_gui }, -- struct, union, enum, etc.
-		Constant = { fg = nord.nord4_gui }, -- any constant
+		Constant = { fg = nord.nord3_gui }, -- any constant
 		Character = { fg = nord.nord14_gui }, -- any character constant: 'c', '\n'
 		Number = { fg = nord.nord15_gui }, -- a number constant: 5
-		Boolean = { fg = nord.nord9_gui }, -- a boolean constant: TRUE, false
+		Boolean = { fg = nord.nord7_gui }, -- a boolean constant: TRUE, false
 		Float = { fg = nord.nord15_gui }, -- a floating point constant: 2.3e10
 		Statement = { fg = nord.nord9_gui }, -- any statement
 		Label = { fg = nord.nord9_gui }, -- case, default, etc.
@@ -22,17 +22,17 @@ theme.loadSyntax = function()
 		Define = { fg = nord.nord9_gui }, -- preprocessor #define
 		Macro = { fg = nord.nord9_gui }, -- same as Define
 		Typedef = { fg = nord.nord9_gui }, -- A typedef
-		PreCondit = { fg = nord.nord13_gui }, -- preprocessor #if, #else, #endif, etc.
+		PreCondit = { fg = nord.nord8_gui }, -- preprocessor #if, #else, #endif, etc.
 		Special = { fg = nord.nord4_gui }, -- any special symbol
-		SpecialChar = { fg = nord.nord13_gui }, -- special character in a constant
+		SpecialChar = { fg = nord.nord7_gui }, -- special character in a constant
 		Tag = { fg = nord.nord4_gui }, -- you can use CTRL-] on this
-		Delimiter = { fg = nord.nord6_gui }, -- character that needs attention like , or .
+		Delimiter = { fg = nord.nord3_gui }, -- character that needs attention like , or .
 		SpecialComment = { fg = nord.nord8_gui }, -- special things inside a comment
 		Debug = { fg = nord.nord11_gui }, -- debugging statements
 		Underlined = { fg = nord.nord14_gui, bg = nord.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = nord.nord1_gui }, -- left blank, hidden
-		Todo = { fg = nord.nord13_gui, bg = nord.none, style = "bold,italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-		Conceal = { fg = nord.none, bg = nord.nord0_gui },
+		Todo = { fg = nord.nord0_gui, bg = nord.nord9_gui }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Conceal = { fg = nord.nord7_gui, bg = nord.nord0_gui, style = 'bold' },
 		htmlLink = { fg = nord.nord14_gui, style = "underline" },
 		markdownH1Delimiter = { fg = nord.nord8_gui },
 		markdownH2Delimiter = { fg = nord.nord11_gui },
@@ -92,43 +92,43 @@ theme.loadEditor = function()
 		FloatBorder = { fg = nord.nord4_gui, bg = nord.float }, -- normal text and background color
 		ColorColumn = { fg = nord.none, bg = nord.nord1_gui }, --  used for the columns set with 'colorcolumn'
 		Conceal = { fg = nord.nord1_gui }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" }, -- the character under the cursor
-		CursorIM = { fg = nord.nord5_gui, bg = nord.none, style = "reverse" }, -- like Cursor, but used when in IME mode
-		Directory = { fg = nord.nord7_gui, bg = nord.none }, -- directory names (and other special names in listings)
+		Cursor = { fg = nord.nord14_gui, bg = nord.nord0_gui, style = "reverse" }, -- the character under the cursor
+		CursorIM = { fg = nord.nord14_gui, bg = nord.nord0_gui, style = "reverse" }, -- like Cursor, but used when in IME mode
+		Directory = { fg = nord.nord15_gui, bg = nord.none }, -- directory names (and other special names in listings)
 		EndOfBuffer = { fg = nord.nord1_gui },
 		ErrorMsg = { fg = nord.none },
 		Folded = { fg = nord.nord3_gui_bright, bg = nord.none, style = "italic" },
 		FoldColumn = { fg = nord.nord7_gui },
-		IncSearch = { fg = nord.nord6_gui, bg = nord.nord10_gui },
+		IncSearch = { fg = nord.nord0_gui, bg = nord.nord14_gui },
 		LineNr = { fg = nord.nord3_gui_bright },
 		CursorLineNr = { fg = nord.nord4_gui },
 		MatchParen = { fg = nord.nord15_gui, bg = nord.none, style = "bold" },
 		ModeMsg = { fg = nord.nord4_gui },
 		MoreMsg = { fg = nord.nord4_gui },
 		NonText = { fg = nord.nord1_gui },
-		Pmenu = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		PmenuSel = { fg = nord.nord4_gui, bg = nord.nord10_gui },
-		PmenuSbar = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		PmenuThumb = { fg = nord.nord4_gui, bg = nord.nord4_gui },
+		Pmenu = { fg = nord.nord4_gui },
+		PmenuSel = { fg = nord.nord7_gui, bg = nord.nord1_gui },
+		PmenuSbar = { fg = nord.nord14_gui },
+		PmenuThumb = { fg = nord.nord4_gui },
 		Question = { fg = nord.nord14_gui },
 		QuickFixLine = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
 		qfLineNr = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
-		Search = { fg = nord.nord6_gui, bg = nord.nord10_gui },
-    Substitute = { fg = nord.nord0_gui, bg = nord.nord12_gui },
+		Search = { link = 'IncSearch' },
+    Substitute = { fg = nord.nord0_gui, bg = nord.nord15_gui },
 		SpecialKey = { fg = nord.nord9_gui },
 		SpellBad = { fg = nord.nord11_gui, bg = nord.none, style = "italic,undercurl" },
 		SpellCap = { fg = nord.nord7_gui, bg = nord.none, style = "italic,undercurl" },
 		SpellLocal = { fg = nord.nord8_gui, bg = nord.none, style = "italic,undercurl" },
 		SpellRare = { fg = nord.nord9_gui, bg = nord.none, style = "italic,undercurl" },
-		StatusLine = { fg = nord.nord4_gui, bg = nord.nord2_gui },
-		StatusLineNC = { fg = nord.nord4_gui, bg = nord.nord1_gui },
+		StatusLine = { fg = nord.nord4_gui, bg = nord.nord0_gui },
+		StatusLineNC = { fg = nord.nord10_gui, bg = nord.nord0_gui },
 		StatusLineTerm = { fg = nord.nord4_gui, bg = nord.nord2_gui },
 		StatusLineTermNC = { fg = nord.nord4_gui, bg = nord.nord1_gui },
 		TabLineFill = { fg = nord.nord4_gui, bg = nord.none },
 		TablineSel = { fg = nord.nord1_gui, bg = nord.nord9_gui },
 		Tabline = { fg = nord.nord4_gui, bg = nord.nord1_gui },
 		Title = { fg = nord.nord14_gui, bg = nord.none, style = "bold" },
-		Visual = { fg = nord.none, bg = nord.nord2_gui },
+		Visual = { fg = nord.nord0_gui, bg = nord.nord14_gui },
 		VisualNOS = { fg = nord.none, bg = nord.nord2_gui },
 		WarningMsg = { fg = nord.nord15_gui },
 		WildMenu = { fg = nord.nord12_gui, bg = nord.none, style = "bold" },
@@ -156,10 +156,10 @@ theme.loadEditor = function()
 		-- Barbar
 		BufferTabpageFill = { bg = nord.nord0_gui },
 
-		BufferCurrent = { bg = nord.nord1_gui },
+		BufferCurrent = { bg = nord.nord0_gui },
 		BufferCurrentMod = { bg = nord.nord1_gui, fg = nord.nord15_gui },
 		BufferCurrentIcon = { bg = nord.nord1_gui },
-		BufferCurrentSign = { bg = nord.nord1_gui },
+		BufferCurrentSign = { bg = nord.nord0_gui },
 		BufferCurrentIndex = { bg = nord.nord1_gui },
 		BufferCurrentTarget = { bg = nord.nord1_gui, fg = nord.nord11_gui },
 
@@ -205,10 +205,10 @@ theme.loadEditor = function()
 	--Set transparent background
 	if vim.g.nord_disable_background then
 		editor.Normal = { fg = nord.nord4_gui, bg = nord.none } -- normal text and background color
-		editor.SignColumn = { fg = nord.nord4_gui, bg = nord.none }
+		editor.SignColumn = { fg = nord.nord4_gui }
 	else
 		editor.Normal = { fg = nord.nord4_gui, bg = nord.nord0_gui } -- normal text and background color
-		editor.SignColumn = { fg = nord.nord4_gui, bg = nord.nord0_gui }
+		editor.SignColumn = { fg = nord.nord4_gui }
 	end
 
 	-- Remove window split borders
@@ -257,9 +257,9 @@ theme.loadTreeSitter = function()
 
 	local treesitter = {
 		TSConstructor = { fg = nord.nord9_gui }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-		TSConstant = { fg = nord.nord13_gui }, -- For constants
-		TSFloat = { fg = nord.nord15_gui }, -- For floats
-		TSNumber = { fg = nord.nord15_gui }, -- For all number
+		TSConstant = { fg = nord.nord3_gui }, -- For constants
+		TSFloat = { fg = nord.nord7_gui }, -- For floats
+		TSNumber = { fg = nord.nord7_gui }, -- For all number
 		TSAttribute = { fg = nord.nord15_gui }, -- (unstable) TODO: docs
 		TSError = { fg = nord.nord11_gui }, -- For syntax/parser errors.
 		TSException = { fg = nord.nord15_gui }, -- For exception related keywords.
@@ -285,9 +285,9 @@ theme.loadTreeSitter = function()
 		TSURI = { fg = nord.nord14_gui }, -- Any URI like a link or email.
 		TSAnnotation = { fg = nord.nord11_gui }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 		["@constructor"] = { fg = nord.nord9_gui },
-		["@constant"] = { fg = nord.nord13_gui },
-		["@float"] = { fg = nord.nord15_gui },
-		["@number"] = { fg = nord.nord15_gui },
+		["@constant"] = { fg = nord.nord3_gui },
+		["@float"] = { fg = nord.nord7_gui },
+		["@number"] = { fg = nord.nord7_gui },
 		["@attribute"] = { fg = nord.nord15_gui },
 		["@error"] = { fg = nord.nord11_gui },
 		["@exception"] = { fg = nord.nord15_gui },
@@ -328,7 +328,7 @@ theme.loadTreeSitter = function()
 
   if vim.g.nord_bold == false then
 		treesitter.TSVariableBuiltin = { fg = nord.nord4_gui }
-		treesitter.TSBoolean = { fg = nord.nord9_gui } -- For booleans.
+		treesitter.TSBoolean = { fg = nord.nord7_gui } -- For booleans.
 		treesitter.TSConstBuiltin = { fg = nord.nord7_gui } -- For constant that are built in the language: `nil` in Lua.
 		treesitter.TSConstMacro = { fg = nord.nord7_gui } -- For constants that are defined by macros: `NULL` in C.
 		treesitter.TSVariable = { fg = nord.nord4_gui } -- Any variable name that does not have another highlight.
@@ -336,14 +336,14 @@ theme.loadTreeSitter = function()
 		treesitter["@variable"] = { fg = nord.nord4_gui }
 		treesitter["@variable.builtin"] = { fg = nord.nord4_gui }
 		treesitter["@variable.global"] = { fg = nord.nord4_gui }
-		treesitter["@boolean"] = { fg = nord.nord9_gui }
+		treesitter["@boolean"] = { fg = nord.nord7_gui }
 		treesitter["@constant.builtin"] = { fg = nord.nord7_gui }
 		treesitter["@constant.macro"] = { fg = nord.nord7_gui }
 		treesitter["@text.title"] = { fg = nord.nord10_gui, bg = nord.none }
 		treesitter["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none }
   else
 		treesitter.TSVariableBuiltin = { fg = nord.nord4_gui, style = "bold" }
-		treesitter.TSBoolean = { fg = nord.nord9_gui, style = "bold" }
+		treesitter.TSBoolean = { fg = nord.nord7_gui, style = "bold" }
 		treesitter.TSConstBuiltin = { fg = nord.nord7_gui, style = "bold" }
 		treesitter.TSConstMacro = { fg = nord.nord7_gui, style = "bold" }
 		treesitter.TSVariable = { fg = nord.nord4_gui, style = "bold" }
@@ -351,7 +351,7 @@ theme.loadTreeSitter = function()
 		treesitter["@variable"] = { fg = nord.nord4_gui, style = "bold" }
 		treesitter["@variable.builtin"] = { fg = nord.nord4_gui, style = "bold" }
 		treesitter["@variable.global"] = { fg = nord.nord4_gui, style = "bold" }
-		treesitter["@boolean"] = { fg = nord.nord9_gui, style = "bold" }
+		treesitter["@boolean"] = { fg = nord.nord7_gui, style = "bold" }
 		treesitter["@constant.builtin"] = { fg = nord.nord7_gui, style = "bold" }
 		treesitter["@constant.macro"] = { fg = nord.nord7_gui, style = "bold" }
 		treesitter["@text.title"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }
@@ -564,12 +564,17 @@ theme.loadPlugins = function()
 		GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
 
 		-- Telescope
-		TelescopePromptBorder = { fg = nord.nord4_gui },
-		TelescopeResultsBorder = { fg = nord.nord4_gui },
-		TelescopePreviewBorder = { fg = nord.nord4_gui },
+		TelescopePromptBorder = { fg = nord.nord8_gui },
+		TelescopeResultsBorder = { fg = nord.nord8_gui },
+		TelescopePreviewBorder = { fg = nord.nord8_gui },
 		TelescopeSelectionCaret = { fg = nord.nord9_gui },
-		TelescopeSelection = { fg = nord.nord6_gui, bg = nord.nord2_gui },
+		TelescopeSelection = { fg = nord.nord7_gui, bg = nord.nord1_gui },
 		TelescopeMatching = { link = 'Search' },
+		TelescopePromptTitle = { fg = nord.nord9_gui },
+		TelescopeResultsTitle = { fg = nord.nord9_gui },
+		TelescopePreviewTitle = { fg = nord.nord9_gui },
+		TelescopePromptCounter = { fg = nord.nord9_gui },
+		TelescopePromptPrefix = { fg = nord.nord9_gui },
 
 		-- NvimTree
     NvimTreeRootFolder = { fg = nord.nord15_gui },
@@ -692,12 +697,20 @@ theme.loadPlugins = function()
 		Sneak = { fg = nord.nord0_gui, bg = nord.nord4_gui },
 		SneakScope = { bg = nord.nord1_gui },
 
+		-- Harpoon
+		HarpoonBorder = { fg = nord.nord14_gui },
+		HarpoonWindow = { fg = nord.nord4_gui, bg = nord.nord0_gui },
+
+		-- Fidget
+		FidgetTask = { fg = nord.nord10_gui },
+		FidgetTitle = { fg = nord.nord14_gui },
+
 		-- Cmp
-		CmpItemKind = { fg = nord.nord15_gui },
-		CmpItemAbbrMatch = { fg = nord.nord5_gui, style = "bold" },
-		CmpItemAbbrMatchFuzzy = { fg = nord.nord5_gui, style = "bold" },
+		CmpItemKind = { fg = nord.nord7_gui }, -- selected item
+		CmpItemAbbrMatch = { fg = nord.nord14_gui, style = "bold" },
+		CmpItemAbbrMatchFuzzy = { fg = nord.nord14_gui, style = "bold" },
 		CmpItemAbbr = { fg = nord.nord4_gui },
-		CmpItemMenu = { fg = nord.nord14_gui },
+		CmpItemMenu = { fg = nord.nord2_gui }, -- source
 
 		-- Indent Blankline
 		IndentBlanklineChar = { fg = nord.nord3_gui },
@@ -756,6 +769,13 @@ theme.loadPlugins = function()
 
 		-- Fern
 		FernBranchText = { fg = nord.nord3_gui_bright },
+
+		-- LaTeX
+		texFileArg = { fg = nord.nord7_gui },
+		texFileOpt = { fg = nord.nord8_gui },
+		texMathEnvArgName = { fg = nord.nord8_gui },
+		texSIArgUnit = { fg = nord.nord15_gui },
+		texPartArgTitle = { fg = nord.nord14_gui, style = "bold" },
 
 		-- nvim-ts-rainbow
 		rainbowcol1 = { fg = nord.nord15_gui },
